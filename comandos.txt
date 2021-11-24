@@ -1,20 +1,12 @@
- 1627  docker run --name todo -p 27017:27017 -d -t mongo
- 1628  docker ps
- 1629  docker exec -it mongo
- 1630  docker exec -it todo 
- 1631  docker exec -it todo mongo
- 1632  docker ps
- 1633  cd Documents/cursos/FullStack/
- 1634  ls
- 1635  cd backend/
- 1636  ls
- 1637  cd src/
- 1638  ls
- 1639  cd ..
- 1640  ls
- 1641  npm start
- 1642  ls
- 1643  code .
- 1644  docker exec -it todo mongo
- 1645  docker exec -it todo bash
- 1646  docker exec -it todo mongo
+npm start
+
+docker run --name todo -p 27017:27017 -d -t mongo
+docker ps
+docker exec -it todo mongo
+docker ps
+docker exec -it todo bash
+docker exec -it todo mongo
+show dbs
+use todo
+show collections
+db.tasks.find()
