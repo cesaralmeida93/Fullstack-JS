@@ -2,8 +2,8 @@ import React, {useMemo} from "react";
 import { format } from 'date-fns';
 import * as S from './styles';
 
+import typeIcons from "../../utils/typeIcons";
 
-import iconDefault from '../../assets/default.png'
 
 function TaskCard({type, title, when }) {
     const date = useMemo(() => format(new Date(when), 'dd/MM/yyyy'));
@@ -12,7 +12,7 @@ function TaskCard({type, title, when }) {
     return (
         <S.Container>
             <S.TopCard>
-                <img src={iconDefault} alt="Icone da Tarefa"/>
+                <img src={typeIcons[type]} alt="Icone da Tarefa"/>
                 <h3>{title}</h3>
             </S.TopCard>
             <S.BottomCard>
