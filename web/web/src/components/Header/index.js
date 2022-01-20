@@ -17,7 +17,7 @@ function Header({ lateCount, clickNotification }) {
                 <span className="dividir" />
                 < a href='#'>SINCRONIZAR CELULAR</a>
                 <span className="dividir" />
-                <button onClick={clickNotification}>
+                <button onClick={clickNotification} id="notification">
                     <img src={bell} alt="Notificação" />
                     <span>{lateCount}</span>
                 </button>
