@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './views/Home';
-import Task from './views/Task'
+
+import Routes from './routes';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Task />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
