@@ -2,7 +2,7 @@
 
 ## backend: nodejs
 
-### frontend: React-JS
+## frontend: React-JS
 
 ### mobile: React-Native
 - npm install -g expo-cli
