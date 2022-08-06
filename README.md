@@ -4,7 +4,7 @@
 
 ## frontend: React-JS
 
-### mobile: React-Native
+## mobile: React-Native
 - npm install -g expo-cli
 - expo init mobile-todo
 - cd mobile-todo
