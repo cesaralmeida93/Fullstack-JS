@@ -5,6 +5,7 @@ import logo from '../../assets/logo.png'
 import bell from '../../assets/bell.png'
 
 import api from '../../services/api'
+import isConnected from '../../utils/isConnected'
 
 function Header({ clickNotification }) {
   const [lateCount, setLateCount] = useState()
@@ -19,6 +20,11 @@ function Header({ clickNotification }) {
     lateVerify()
   })
 
+  async function Logout() {
+    localStorage.removeItem('@todo/macaddress')
+    window.location.reload()
+  }
+
   return (
     <S.Container>
       <S.LeftSide>
@@ -29,7 +35,14 @@ function Header({ clickNotification }) {
         <span className="dividir" />
         <Link to="/task">NOVA TAREFA</Link>
         <span className="dividir" />
-        <Link to="/qrcode">SINCRONIZAR CELULAR</Link>
+        {!isConnected ? (
+          <Link to="/qrcode">SINCRONIZAR CELULAR</Link>
+        ) : (
+          <button type="button" onClick={Logout}>
+            SAIR
+          </button>
+        )}
+
         {lateCount && (
           <>
             <span className="dividir" />
